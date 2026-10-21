@@ -1,0 +1,8 @@
+数见 DataLens · 本地与在线启动
+
+在线：将本包源码上传 GitHub，在 Render 新建 Blueprint，选择仓库读取 render.yaml。将 DeepSeek Key 与至少16字符的独立展示口令分别填写到 Render 环境变量 DEEPSEEK_API_KEY 与 DEMO_ACCESS_CODE。请先阅读 README.md 的部署步骤。
+
+本地：安装 Node.js 20+，双击“启动数见.cmd”或运行 npm start，保持窗口开启。网址 http://127.0.0.1:8766/ 。将 .env.example 复制为 .env，填入自己的 Key。无 Key 也可使用规则模式。
+
+GitHub Pages 无法运行后端；完整在线体验使用 Render 给出的 HTTPS 网址。
+本包不含真实 Key 或口令。不要上传填写过的 .env。

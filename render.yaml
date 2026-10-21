@@ -1,0 +1,24 @@
+# Secrets are entered in Render, never committed to this file.
+services:
+  - type: web
+    name: datalens-ai-demo
+    runtime: node
+    plan: free
+    buildCommand: npm test
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: SKIP_INSTALL_DEPS
+        value: "true"
+      - key: DEPLOYMENT_MODE
+        value: cloud
+      - key: DEEPSEEK_MODEL
+        value: deepseek-flash
+      - key: DEMO_MAX_ANALYSES
+        value: "30"
+      - key: DEEPSEEK_API_KEY
+        sync: false
+      - key: DEMO_ACCESS_CODE
+        sync: false
